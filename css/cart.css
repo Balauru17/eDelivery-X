@@ -1,0 +1,75 @@
+
+        /* Style the navbar */
+        .navbar {
+            background-color: #041d2e; /* Blue background color */
+            color: white; /* Text color */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* Style the navbar links */
+        .navbar-left a {
+            color: yellow; /* Make the links yellow */
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold; /* Make "About Us" title bold */
+        }
+
+        /* Style the yellow boxes for "Home" and "Cart" links */
+        .navbar-right a {
+            display: inline-block;
+            background-color: yellow;
+            color: black; /* Text color */
+            padding: 5px 10px;
+            margin-right: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Style the cart items */
+        .cart-items {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart-items h2 {
+            margin-top: 0;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cart-item p {
+            margin: 0;
+        }
+
+        .cart-item .quantity {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        #payButton {
+            display: block;
+            margin: 0.2in auto 0;
+            padding: 5px 10px;
+            background-color: #041d2e;
+            color: yellow;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        #payButton:hover {
+            background-color: white;
+            color: #041d2e;
+        }

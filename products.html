@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/products.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="/">eDeliverX</a>
+        </div>
+        <div class="navbar-right">
+            <a href="home.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <input class="search-bar" type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton">Search</button>
+        </div>
+    </div>
+    <h1 class="title">Products</h1>
+
+    <h2>Computers</h2>
+<ul>
+    <li>
+        <img src="images/Acer_Aspire3.png.webp" alt="Computer 1">
+        <p>Acer Aspire 3</p>
+        <p>Price: $549.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" data-product-name="Acer Aspire 3">Learn More</button>
+            <button onclick="addToCart('Acer Aspire 3', 1, 549.00)">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/Samsung_GalaxyBook3_Pro.webp" alt="Computer 2">
+        <p>Samsung Galaxy Book 3 Pro</p>
+        <p>Price: $1,799</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" data-product-name="Samsung Galaxy Book 3 Pro">Learn More</button>
+            <button onclick="addToCart('Samsung Galaxy Book 3 Pro', 1, 1.799)">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/MacbookAir.jpg.webp" alt="Computer 3">
+        <p>Macbook Air</p>
+        <p>Price: $1,200</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" data-product-name="Macbook Air">Learn More</button>
+            <button onclick="addToCart('MacbookAir', 1,1.200)">Add to Cart</button>
+        </div>
+    </li>
+</ul>
+
+<h2>TVs</h2>
+<ul>
+    <li>
+        <img src="images/Samsung_75inch.jpg" alt="TV 1">
+        <p>Samsung 75 inches</p>
+        <p>Price: $945.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" data-product-name="Samsung 75 inches">Learn More</button>
+            <button onclick="addToCart('Samsung 75 inches', 1, 945.00)">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/LG_43.webp" alt="TV 2">
+        <p>LG 43 inches</p>
+        <p>Price: $399.99</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" data-product-name="LG 43 inches">Learn More</button>
+            <button onclick="addToCart('LG 43 inches', 1, 399.00)">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/Sony_75.webp" alt="TV 3">
+        <p>Sony 75 inches</p>
+        <p>Price: $1599.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" data-product-name="Sony 75 inches">Learn More</button>
+            <button onclick="addToCart('Sony 75', 1, 1599.00)">Add to Cart</button>
+        </div>
+    </li>
+</ul>
+
+<h2>Phones</h2>
+<ul>
+    <li>
+        <img src="images/Galaxy_A14-5g.avif" alt="Phone 1">
+        <p>Galaxy A14</p>
+        <p>Price: $207.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" data-product-name="Galaxy A14">Learn More</button>
+            <button onclick="addToCart('Galaxy A14', 1,207.00)">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/Huawei_Mate50_Pro.jpg" alt="Phone 2">
+        <p>Huawei Mate 50 Pro</p>
+        <p>Price: $620.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" data-product-name="Huawei Mate 50 Pro">Learn More</button>
+            <button onclick="addToCart('Huawei Mate 50 Pro', 1, 620.00)">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/Iphone13_ProMax.jpeg" alt="Phone 3">
+        <p>Iphone 13 Pro Max</p>
+        <p>Price: $880.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" data-product-name="Iphone 13 Pro Max">Learn More</button>
+            <button onclick="addToCart('Iphone 13 Pro Max', 1, 880.00)">Add to Cart</button>
+        </div>
+    </li>
+</ul>
+
+
+<script>
+    
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    searchButton.addEventListener('click', function () {
+        const searchTerm = searchInput.value.trim();
+        
+        // Implement your search logic here (e.g., navigate to a search results page or display search results).
+        alert("Performing a search for: " + searchTerm);
+    });
+
+    // Allow the user to submit the search by pressing Enter in the search input field
+    searchInput.addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+            searchButton.click(); // Trigger a click event on the search button
+        }
+    });
+
+    // Function to handle "Learn More" button click
+    function learnMore(productName) {
+        // You can implement your logic here, e.g., show product details
+        alert("Learn more about " + productName);
+    }
+
+    // Function to handle "Add to Cart" button click
+    function addToCart(productName) {
+        // You can implement your cart functionality here, e.g., add the product to the cart
+        alert("Added " + productName + " to the cart");
+    }
+
+    // Add event listeners to the buttons
+    const learnMoreButtons = document.querySelectorAll('.learn-more-button');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+
+    learnMoreButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const productName = this.getAttribute('data-product-name');
+            learnMore(productName);
+        });
+    });
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const productName = this.getAttribute('data-product-name');
+            addToCart(productName);
+        });
+    });
+
+
+    function addToCart(productName, quantity, price) {
+    // Retrieve the cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    // Check if the product already exists in the cart
+    const existingItemIndex = cartItems.findIndex(item => item.name === productName);
+
+    if (existingItemIndex > -1) {
+        // If the product already exists, update the quantity
+        cartItems[existingItemIndex].quantity += quantity;
+    } else {
+        // If the product is new, add it to the cart
+        cartItems.push({ name: productName, quantity, price });
+    }
+
+    // Save the updated cart items to localStorage
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+    // Show a confirmation message
+    alert('Product added to cart!');
+}
+
+</script>
+</body> </html>

@@ -1,0 +1,96 @@
+
+        /* Style the navbar */
+        .navbar {
+            background-color: #041d2e; /* Blue background color */
+            color: white; /* Text color */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* Style the navbar links */
+        .navbar-left a {
+            color: yellow; /* Make the links yellow */
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold; /* Make "About Us" title bold */
+        }
+
+        /* Style the search bar */
+        .search-bar {
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        /* Style the eDeliverX logo */
+        .navbar-left {
+            font-size: 1.2em;
+        }
+
+        /* Style the title */
+        .title {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Style the list to display three products in a row */
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Style each product item */
+        li {
+            width: calc(30% - 10px); /* Set the width to occupy 30% of the available space */
+            margin-bottom: 20px; /* Adjust as needed for spacing between rows */
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Set a fixed height for product images and center them */
+        li img {
+            max-width: 100%;
+            height: 200px; /* Set the desired height */
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Style the product details */
+        li p {
+            margin: 0;
+        }
+
+        /* Style the buttons */
+        .product-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .product-buttons button {
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style the yellow boxes for "Home" and "Cart" links */
+        .navbar-right a {
+            display: inline-block;
+            background-color: yellow;
+            color: black; /* Text color */
+            padding: 5px 10px;
+            margin-right: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+  
