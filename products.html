@@ -46,7 +46,7 @@
         <p>Macbook Air</p>
         <p>Price: $1,200</p>
         <div class="product-buttons">
-            <button class="learn-more-button" data-product-name="Macbook Air">Learn More</button>
+            <button class="learn-more-button" onclick="learnMore('Macbook')" data-product-name="Macbook Air">Learn More</button>
             <button onclick="addToCart('MacbookAir', 1,1200, 'images/MacbookAir.jpg.webp')">Add to Cart</button>
         </div>
     </li>
@@ -59,7 +59,7 @@
         <p>Samsung 75 inches</p>
         <p>Price: $945.00</p>
         <div class="product-buttons">
-            <button class="learn-more-button" data-product-name="Samsung 75 inches">Learn More</button>
+            <button class="learn-more-button" onclick="learnMore('Samsung')" data-product-name="Samsung 75 inches">Learn More</button>
             <button onclick="addToCart('Samsung 75 inches', 1, 945.00, 'images/Samsung_75inch.jpg')">Add to Cart</button>
         </div>
     </li>
@@ -68,7 +68,7 @@
         <p>LG 43 inches</p>
         <p>Price: $399.99</p>
         <div class="product-buttons">
-            <button class="learn-more-button" data-product-name="LG 43 inches">Learn More</button>
+            <button class="learn-more-button" onclick="learnMore('LG')"  data-product-name="LG 43 inches">Learn More</button>
             <button onclick="addToCart('LG 43 inches', 1, 399.00, 'images/LG_43.webp')">Add to Cart</button>
         </div>
     </li>
@@ -77,7 +77,7 @@
         <p>Sony 75 inches</p>
         <p>Price: $1599.00</p>
         <div class="product-buttons">
-            <button class="learn-more-button" data-product-name="Sony 75 inches">Learn More</button>
+            <button class="learn-more-button" onclick="learnMore('Sony')" data-product-name="Sony 75 inches">Learn More</button>
             <button onclick="addToCart('Sony 75', 1, 1599.00, 'images/Sony_75.webp')">Add to Cart</button>
         </div>
     </li>
@@ -90,7 +90,7 @@
         <p>Galaxy A14</p>
         <p>Price: $207.00</p>
         <div class="product-buttons">
-            <button class="learn-more-button" data-product-name="Galaxy A14">Learn More</button>
+            <button class="learn-more-button"onclick="learnMore('Galaxy')" data-product-name="Galaxy A14">Learn More</button>
             <button onclick="addToCart('Galaxy A14', 1,207.00, 'images/Galaxy_A14-5g.avif')">Add to Cart</button>
         </div>
     </li>
@@ -99,7 +99,7 @@
         <p>Huawei Mate 50 Pro</p>
         <p>Price: $620.00</p>
         <div class="product-buttons">
-            <button class="learn-more-button" data-product-name="Huawei Mate 50 Pro">Learn More</button>
+            <button class="learn-more-button" onclick="learnMore('Huawei')" data-product-name="Huawei Mate 50 Pro">Learn More</button>
             <button onclick="addToCart('Huawei Mate 50 Pro', 1, 620.00, 'images/Huawei_Mate50_Pro.jpg')">Add to Cart</button>
         </div>
     </li>
@@ -108,7 +108,7 @@
         <p>Iphone 13 Pro Max</p>
         <p>Price: $880.00</p>
         <div class="product-buttons">
-            <button class="learn-more-button" data-product-name="Iphone 13 Pro Max">Learn More</button>
+            <button class="learn-more-button" onclick="learnMore('Iphone 13')" data-product-name="Iphone 13 Pro Max">Learn More</button>
             <button onclick="addToCart('Iphone 13 Pro Max', 1, 880.00, 'images/Iphone13_ProMax.jpeg')">Add to Cart</button>
         </div>
     </li>
@@ -144,8 +144,26 @@
             case 'Samsung':
                 alert("This is Samsung")
                 break
+            case 'Macbook':
+                alert("This is Macbook")
+                break
             case 'Samsung':
                 alert("This is Samsung")
+                break
+            case 'LG':
+                alert("This is LG")
+                break
+            case 'Sony':
+                alert("This is Sony")
+                break
+            case 'Galaxy':
+                alert("This is Galaxy")
+                break
+            case 'Huawei':
+                alert("This is Huawei")
+                break
+            case 'Iphone 13':
+                alert("This is Iphone")
                 break
             default:
                 alert("This product has no details")
