@@ -10,7 +10,7 @@
 <body>
     <div class="navbar">
         <div class="navbar-left">
-            <a href="/">eDeliverX</a>
+            <a href="home.html">eDeliverX</a>
         </div>
         <div class="navbar-right">
             <a href="home.html">Home</a>
@@ -28,17 +28,17 @@
         <p>Acer Aspire 3</p>
         <p>Price: $549.00</p>
         <div class="product-buttons">
-            <button class="learn-more-button" data-product-name="Acer Aspire 3">Learn More</button>
-            <button onclick="addToCart('Acer Aspire 3', 1, 549.00)">Add to Cart</button>
+            <button class="learn-more-button" onclick="learnMore('Acer')" data-product-name="Acer Aspire 3">Learn More</button>
+            <button onclick="addToCart('Acer Aspire 3', 1, 549.00, 'images/Acer_Aspire3.png.webp')">Add to Cart</button>
         </div>
     </li>
     <li>
         <img src="images/Samsung_GalaxyBook3_Pro.webp" alt="Computer 2">
         <p>Samsung Galaxy Book 3 Pro</p>
         <p>Price: $1,799</p>
-        <div class="product-buttons">
-            <button class="learn-more-button" data-product-name="Samsung Galaxy Book 3 Pro">Learn More</button>
-            <button onclick="addToCart('Samsung Galaxy Book 3 Pro', 1, 1.799)">Add to Cart</button>
+        <div class="product-buttons">         
+            <button class="learn-more-button"onclick="learnMore('Samsung')" data-product-name="Samsung Galaxy Book 3 Pro">Learn More</button>
+            <button onclick="addToCart('Samsung Galaxy Book 3 Pro', 1, 1799, 'images/Samsung_GalaxyBook3_Pro.webp')">Add to Cart</button>
         </div>
     </li>
     <li>
@@ -47,7 +47,7 @@
         <p>Price: $1,200</p>
         <div class="product-buttons">
             <button class="learn-more-button" data-product-name="Macbook Air">Learn More</button>
-            <button onclick="addToCart('MacbookAir', 1,1.200)">Add to Cart</button>
+            <button onclick="addToCart('MacbookAir', 1,1200, 'images/MacbookAir.jpg.webp')">Add to Cart</button>
         </div>
     </li>
 </ul>
@@ -60,7 +60,7 @@
         <p>Price: $945.00</p>
         <div class="product-buttons">
             <button class="learn-more-button" data-product-name="Samsung 75 inches">Learn More</button>
-            <button onclick="addToCart('Samsung 75 inches', 1, 945.00)">Add to Cart</button>
+            <button onclick="addToCart('Samsung 75 inches', 1, 945.00, 'images/Samsung_75inch.jpg')">Add to Cart</button>
         </div>
     </li>
     <li>
@@ -69,7 +69,7 @@
         <p>Price: $399.99</p>
         <div class="product-buttons">
             <button class="learn-more-button" data-product-name="LG 43 inches">Learn More</button>
-            <button onclick="addToCart('LG 43 inches', 1, 399.00)">Add to Cart</button>
+            <button onclick="addToCart('LG 43 inches', 1, 399.00, 'images/LG_43.webp')">Add to Cart</button>
         </div>
     </li>
     <li>
@@ -78,7 +78,7 @@
         <p>Price: $1599.00</p>
         <div class="product-buttons">
             <button class="learn-more-button" data-product-name="Sony 75 inches">Learn More</button>
-            <button onclick="addToCart('Sony 75', 1, 1599.00)">Add to Cart</button>
+            <button onclick="addToCart('Sony 75', 1, 1599.00, 'images/Sony_75.webp')">Add to Cart</button>
         </div>
     </li>
 </ul>
@@ -91,7 +91,7 @@
         <p>Price: $207.00</p>
         <div class="product-buttons">
             <button class="learn-more-button" data-product-name="Galaxy A14">Learn More</button>
-            <button onclick="addToCart('Galaxy A14', 1,207.00)">Add to Cart</button>
+            <button onclick="addToCart('Galaxy A14', 1,207.00, 'images/Galaxy_A14-5g.avif')">Add to Cart</button>
         </div>
     </li>
     <li>
@@ -100,7 +100,7 @@
         <p>Price: $620.00</p>
         <div class="product-buttons">
             <button class="learn-more-button" data-product-name="Huawei Mate 50 Pro">Learn More</button>
-            <button onclick="addToCart('Huawei Mate 50 Pro', 1, 620.00)">Add to Cart</button>
+            <button onclick="addToCart('Huawei Mate 50 Pro', 1, 620.00, 'images/Huawei_Mate50_Pro.jpg')">Add to Cart</button>
         </div>
     </li>
     <li>
@@ -109,7 +109,7 @@
         <p>Price: $880.00</p>
         <div class="product-buttons">
             <button class="learn-more-button" data-product-name="Iphone 13 Pro Max">Learn More</button>
-            <button onclick="addToCart('Iphone 13 Pro Max', 1, 880.00)">Add to Cart</button>
+            <button onclick="addToCart('Iphone 13 Pro Max', 1, 880.00, 'images/Iphone13_ProMax.jpeg')">Add to Cart</button>
         </div>
     </li>
 </ul>
@@ -137,35 +137,23 @@
     // Function to handle "Learn More" button click
     function learnMore(productName) {
         // You can implement your logic here, e.g., show product details
-        alert("Learn more about " + productName);
+        switch(productName){
+            case 'Acer':
+                alert("This is Acer")
+                break
+            case 'Samsung':
+                alert("This is Samsung")
+                break
+            case 'Samsung':
+                alert("This is Samsung")
+                break
+            default:
+                alert("This product has no details")
+        }
+
     }
 
-    // Function to handle "Add to Cart" button click
-    function addToCart(productName) {
-        // You can implement your cart functionality here, e.g., add the product to the cart
-        alert("Added " + productName + " to the cart");
-    }
-
-    // Add event listeners to the buttons
-    const learnMoreButtons = document.querySelectorAll('.learn-more-button');
-    const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
-
-    learnMoreButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const productName = this.getAttribute('data-product-name');
-            learnMore(productName);
-        });
-    });
-
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const productName = this.getAttribute('data-product-name');
-            addToCart(productName);
-        });
-    });
-
-
-    function addToCart(productName, quantity, price) {
+    function addToCart(productName, quantity, price, image) {
     // Retrieve the cart items from localStorage
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
@@ -177,7 +165,7 @@
         cartItems[existingItemIndex].quantity += quantity;
     } else {
         // If the product is new, add it to the cart
-        cartItems.push({ name: productName, quantity, price });
+        cartItems.push({ name: productName, quantity, price, image});
     }
 
     // Save the updated cart items to localStorage
@@ -188,4 +176,5 @@
 }
 
 </script>
-</body> </html>
+</body>
+</html>

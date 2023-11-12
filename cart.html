@@ -9,7 +9,7 @@
     <body>
         <div class="navbar">
             <div class="navbar-left">
-                <a href="/">eDeliverX</a>
+                <a href="home.html">eDeliverX</a>
             </div>
             <div class="navbar-right">
                 <a href="home.html">Home</a>
@@ -60,12 +60,18 @@
                     itemImage.alt = item.name; // Set the alt attribute
                     itemImage.classList.add('item-image');
                     cartItem.appendChild(itemImage);
-    
+                    itemImage.style.width = '200px'; // Change the width to the desired size
+                    
                     const quantity = document.createElement('p');
                     quantity.classList.add('quantity');
                     quantity.textContent = `${item.quantity}x`;
                     cartItem.appendChild(quantity);
-    
+
+                    const price = document.createElement('p');
+                    price.classList.add('price');
+                    price.textContent = `Price ${item.price}€`;
+                    cartItem.appendChild(price);
+
                     const itemName = document.createElement('p');
                     itemName.textContent = item.name;
                     cartItem.appendChild(itemName);
@@ -80,12 +86,12 @@
                     total += item.quantity * item.price;
                 });
     
-                const shippingFeeAmount = total >= 500 ? 0 : 3.99; // Shipping fee is 3.99 for orders below 350 euros
+                const shippingFeeAmount = total >= 500 ? 0 : 3.99; // Shipping fee is 3.99 for orders below 350 euro
                 const orderTotalAmount = total + shippingFeeAmount;
     
-                productTotal.innerHTML = `Product Total: ${total.toFixed(2)} euros`;
-                shippingFee.innerHTML = `Shipping Fee: ${shippingFeeAmount.toFixed(2)} euros`;
-                orderTotal.innerHTML = `Order Total: ${orderTotalAmount.toFixed(2)} euros`;
+                productTotal.innerHTML = `Product Total: ${total.toFixed(2)}€`;
+                shippingFee.innerHTML = `Shipping Fee: ${shippingFeeAmount.toFixed(2)}€`;
+                orderTotal.innerHTML = `Order Total: ${orderTotalAmount.toFixed(2)}€`;
             }
     
             function deleteItem(index) {
