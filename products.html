@@ -137,39 +137,47 @@
     // Function to handle "Learn More" button click
     function learnMore(productName) {
         // You can implement your logic here, e.g., show product details
-        switch(productName){
+        switch (productName) {
             case 'Acer':
                 alert("Processor: Intel Core, RAM: 8GB, Storage: SSDs and HDDs.")
-                break
+                break;
             case 'Samsung':
                 alert("Processor: Intel Core i7, RAM: 16GB, Storage: 512GB SSDs.")
-                break
+                break;
             case 'Macbook':
                 alert("Processor: M1 chip, RAM: 16GB, Storage: 256GB SSDs.")
-                break
+                break;
             case 'Samsung':
                 alert("Display: LED or QLED, Connectivity: HDMI, Blu-ray players, USB ports, Resolution: 4K Ultra HD (3840 x 2160 pixels).")
-                break
+                break;
             case 'LG':
                 alert("Display: LED or OLED, Connectivity: HDMI, Blu-ray players, USB ports, Resolution:  Full HD (1920 x 1080 pixels).")
-                break
+                break;
             case 'Sony':
-                alert("TDisplay: LED or OLED, Connectivity: HDMI, Blu-ray players, USB ports, Resolution: 4K Ultra HD (3840 x 2160 pixels).")
-                break
+                alert("Display: LED or OLED, Connectivity: HDMI, Blu-ray players, USB ports, Resolution: 4K Ultra HD (3840 x 2160 pixels).")
+                break;
             case 'Galaxy':
                 alert("Display: Size of around 6.5 to 6.6 inches, RAM and Storage: 4GB, 64GB, Connectivity: 4G LTE, Wi-Fi, Bluetooth, and GPS.")
-                break
+                break;
             case 'Huawei':
                 alert("Display: OLED display with a size of 6.76 inches, RAM and Storage: 12GB, 256GB, Connectivity: 4G LTE, Wi-Fi, Bluetooth, and GPS, NFC for contactless payments and has a USB Type-C port for charging and data transfer.")
-                break
+                break;
             case 'Iphone 13':
                 alert("Display: Super Retina XDR display with a size of 6.7 inches, Storage: 512GB, Connectivity: 5G, Wi-Fi 6, Bluetooth, NFC, GPS, Lightning connector.")
-                break
+                break;
             default:
                 alert("This product has no details")
         }
 
+        // Append the information directly under the "Learn More" button
+        const detailsParagraph = document.createElement('p');
+        detailsParagraph.innerHTML = `${productName} details: Insert your detailed information here.`;
+
+        // Find the parent node of the button (li element) and append the details paragraph
+        const learnMoreButton = document.querySelector(`button[data-product-name="${productName}"]`);
+        learnMoreButton.parentNode.appendChild(detailsParagraph);
     }
+
 
     function addToCart(productName, quantity, price, image) {
     // Retrieve the cart items from localStorage
