@@ -4,6 +4,10 @@ body, ul {
     padding: 0;
 }
 
+h2 {
+    text-align: center;
+    color: #041d2e;
+}
 /* Style the navbar */
 .navbar {
     background-color: #041d2e; /* Blue background color */
@@ -67,6 +71,7 @@ body, ul {
 .title {
     text-align: center;
     margin-top: 20px;
+    color:#041d2e;
 }
 
 /* Style the list to display three products in a row */
